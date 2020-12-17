@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts/Matieral Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- MyStyle -->
+    <link href="./styles/style.css" rel="stylesheet">
+    <script defer src="./scripts/main.js"></script>
+    <title>Jermaine Blake</title>
+</head>
+<body>
+    <nav>
+        <a  class="logo" href="#intro">JB</a>
+        <div id="nav-list" class="nav-list">
+            <a class="" href="#about">About me</a>
+            <a class="" href="#portfolio">Portfolio</a>
+            <a class="" href="#contact">Contact</a>
+        </div>
+        <a id="nav-menu"><i id="menu"class="material-icons">menu</i></a>
+    </nav>
+    <header>
+        <div id="intro" class="intro">
+            <h2>Hello World,</h2>
+            <h1>I'm Jermaine Blake</h1>
+            <h2>Software Developer</h2>
+        </div>
+            <img class="portrait" src="./media/1606601710518.png" alt="self-portrait" />
+    </header>
+    <div id="about" class="about">
+        <h1>Here's a little story...</h1>
+        <p>I'm a Software Developer with a background in Management, pursuing my passion for technology, solving problems and bringing joy to others through BUILDING long-lasting, purposeful applications.
+            I achieve goals by leveraging my decision making, communication, follow-through combined with a strong desire to experience those A-HA moments.
+        </p><br>
+        <p>
+            Personally, I enjoy gaming, music, travel, and sports. These interests have assisted me in developing the values and skills necessary to thrive within a team environment wherever that may take me.
+        </p>
+    </div>
+    <div id="portfolio" class="portfolio">
+        <h1>Projects</h1>
+        <div class="project-card p1">
+            <div class="project-card-inner">
+                <div class="project-card-front">
+                    <img class="simon" src="./media/simon.png">
+                    <p>Simon</p>
+                </div>
+                <!-- hidden detail card toggled by hover or click -->
+                <div class="project-card-back detail-card">
+                    <h1>Simon</h1><hr>
+                    <p>My take on the classic game of Simon. This was my first time working with asynchronous code and my first full app.</p>
+                    <hr>
+                    <div class="card-links">
+                        <a href="https://jermzblake.github.io/simon-game" target="_blank">DEMO</a>
+                        <a href="https://github.com/jermzblake/simon-game" target="_blank">CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card p2">
+            <div class="project-card-inner">
+                <div class="project-card-front">
+                    <img class="corona" src="./media/coronacafe.png">
+                    <p>Corona Cafeteria</p>
+                </div>
+                <!-- hidden detail card toggled by hover or click -->
+                <div class="project-card-back detail-card">
+                    <h1>Corona Cafeteria</h1><hr>
+                    <p>This app was made with the Coronavirus pandemic in mind. It was created to provide restaurants/bars away to update the status of their establishment in real-time.
+                     And for potenital customers to be able to view the status of all the restaurants on the site and leave comments.
+                    </p>
+                    <p>This app includes full CRUD and OAuth. It was built with Node.js, Express, and Mongoose</p>
+                    <hr>
+                    <div class="card-links">
+                        <a href="https://corona-cafeteria.herokuapp.com/" target="_blank">DEMO</a>
+                        <a href="https://github.com/jermzblake/CoronaCafeteria" target="_blank">CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-card p3">
+            <div class="project-card-inner">
+                <div class="project-card-front">
+                    <img class="trivia" src="./media/TriviaNight.png">
+                    <p>Trivia Night</p>
+                </div>
+                <!-- hidden detail card toggled by hover or click -->
+                <div class="project-card-back detail-card">
+                    <h1>Trivia Night</h1><hr>
+                    <p>Collaborated on this project to create our take on the classic bar trivia game.
+                        Our game is played in real-time and is multiplayer.
+                    </p>
+                    <p>This app includes CRUD and was built with DJANGO & POSTGRESQL</p>
+                    <hr>
+                    <div class="card-links">
+                        <a href="http://trivia-night-django-app.herokuapp.com/" target="_blank">DEMO</a>
+                        <a href="https://github.com/jermzblake/Trivia-Night" target="_blank">CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-form">
+            <form action="" method="POST">
+                <div class="input-container">
+                <label for="name"><i class="material-icons ficons">assignment_ind</i></label>
+                    <input type="text" name="name" placeholder="NAME" class="">
+                </div>
+                    <div class="input-container">
+                <label for="email"><i class="material-icons ficons">alternate_email</i></label>
+                    <input type="text" name="email" placeholder="EMAIL" class="">
+                    </div>
+                    <div class="input-container">
+                <label for="message"><i class="material-icons ficons">message</i></label>
+                    <textarea name="message" placeholder="MESSAGE" class=""></textarea>
+                    </div>
+                <br>
+                <input id="send-btn" type="submit" value="Send">
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

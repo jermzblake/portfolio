@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+* {
+  font-family: "Source Code Pro", monospace;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.material-icons {
+  font-size: 2.5rem;
+}
+
+nav {
+  position: fixed;
+  background: #011627;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FCA311;
+  z-index: 1;
+}
+
+nav .logo {
+  font-size: 1.75rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FCA311;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav #nav-menu {
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+nav #nav-menu :hover {
+  cursor: pointer;
+}
+
+nav .nav-list {
+  display: none;
+}
+
+nav .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #011627;
+  color: #FCA311;
+}
+
+header .portrait {
+  height: 190px;
+  width: 190px;
+  border-radius: 19px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #18252F;
+  color: #EEF0F2;
+}
+
+.about h1 {
+  margin-bottom: 40px;
+}
+
+.about p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FCA311;
+  background: #011627;
+}
+
+.project-card {
+  height: 480px;
+  width: 360px;
+  background: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the project card container */
+.project-card:hover .project-card-inner, .project-card:focus .project-card-inner, .project-card:active .project-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.project-card-front, .project-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.project-card-front {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.project-card-front img {
+  height: 90%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.project-card-front p {
+  background: #FCA311;
+  color: #011627;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.project-card-back {
+  height: 100%;
+  width: 100%;
+  background: #FCA311;
+  color: #011627;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.project-card-back p {
+  font-size: 1rem;
+}
+
+.project-card-back a {
+  color: #011627;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact {
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #18252F;
+  color: #EEF0F2;
+}
+
+.contact .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input[type=text], textarea {
+  width: 80%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.ficons {
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+#send-btn {
+  background-color: #FCA311;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#send-btn:hover {
+  -webkit-box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
+          box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
+}
+/*# sourceMappingURL=style.css.map */

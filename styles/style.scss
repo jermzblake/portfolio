@@ -1,0 +1,257 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+@mixin flexCenter($direction, $background) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: $direction;
+    background: $background;
+}
+
+//variables
+$sourceCode: 'Source Code Pro', monospace;
+$richBlack: #011627;
+$orangeWeb: #FCA311;
+$gunMetal: #18252F;
+
+* {
+    font-family: $sourceCode;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.material-icons {
+    font-size: 2.5rem;
+}
+
+nav {
+    position: fixed;
+    background: $richBlack;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $orangeWeb;
+    z-index: 1;
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $orangeWeb;
+        font-size: 1.5rem;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    #nav-menu {
+        position: absolute;
+        align-self: flex-end;
+        // top: 5px;
+        // right: 10px;
+        // border: 1px solid $orangeWeb;
+        // border-radius: 15px;
+
+        :hover {
+            cursor: pointer;
+        }
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+header {
+    @include flexCenter(row, $richBlack);
+    color: $orangeWeb;
+
+    .portrait {
+        height: 190px;
+        width: 190px;
+        border-radius: 19px;
+    }
+}
+
+.about {
+    @include flexCenter(column, $gunMetal);
+    color: #EEF0F2;
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // max-width: 900px;
+    flex-direction: column;
+    color: $orangeWeb;
+    background: $richBlack;
+}
+
+.project-card {
+    // overflow: hidden;
+    // display: inline-block;
+    height: 480px;
+    width: 360px;
+    background: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+
+    perspective: 1000px;  /* Remove this if you don't want the 3D effect */
+
+    
+}
+
+/* This container is needed to position the front and back side */
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the project card container */
+.project-card:hover .project-card-inner, .project-card:focus .project-card-inner, .project-card:active .project-card-inner {
+transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.project-card-front{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    img {
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    p {
+        background: $orangeWeb;
+        color: $richBlack;
+        text-align: center;
+        font-size: 2rem;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
+
+.project-card-back {
+    height: 100%;
+    width: 100%;
+    background: $orangeWeb;
+    color: $richBlack;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transform: rotateY(180deg);
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        // text-decoration: none;
+        color: $richBlack;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.contact {
+    // @include flexCenter(column, $gunMetal);
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: $gunMetal;
+    color: #EEF0F2;
+
+    .contact-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+input[type=text], textarea {
+    width: 80%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+}
+
+.ficons {
+    margin-right: 6px;
+    margin-top: 6px; 
+}
+
+#send-btn {
+    background-color: $orangeWeb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    //     text-transform: uppercase;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
+}
+
