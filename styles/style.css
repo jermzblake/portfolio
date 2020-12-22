@@ -291,6 +291,13 @@ header .portrait {
           align-items: center;
 }
 
+.contact .contact-form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 input[type=text], textarea {
   width: 80%;
   /* Full width */
@@ -310,13 +317,6 @@ input[type=text], textarea {
   resize: vertical;
 }
 
-.input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
 .ficons {
   margin-right: 6px;
   margin-top: 6px;
@@ -324,11 +324,13 @@ input[type=text], textarea {
 
 #send-btn {
   background-color: #FCA311;
-  color: white;
+  color: #011627;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
   width: 100%;
+  font-size: large;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -408,6 +410,65 @@ footer p {
   }
   .about p:last-child {
     margin-bottom: 0;
+  }
+  .portfolio {
+    height: 1350px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .portfolio .project-cards-container {
+    width: 80%;
+    min-width: 750px;
+    max-width: 1080px;
+    height: 80%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 360px auto 360px;
+        grid-template-columns: 360px auto 360px;
+    -ms-grid-rows: auto 40px auto;
+        grid-template-rows: auto 40px auto;
+  }
+  .portfolio .project-cards-container .p1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .portfolio .project-cards-container .p2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .portfolio .project-cards-container .p3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .portfolio .project-cards-container .p4 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .contact-form {
+    width: 75%;
+  }
+  .contact-form form {
+    width: 100%;
+    max-width: 650px;
+  }
+  .contact-form #send-btn {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
