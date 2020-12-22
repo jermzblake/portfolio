@@ -269,6 +269,10 @@ header .portrait {
   color: #EEF0F2;
 }
 
+.contact h1 {
+  font-size: xx-large;
+}
+
 .contact .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
