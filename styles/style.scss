@@ -86,34 +86,10 @@ header {
     }
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid $orangeWeb;
-    background: $richBlack;
-    color: $orangeWeb;
-    
-    .social-links {
-        text-align: center;
-        margin-top: 15px;
-        margin-bottom: 5px;
-
-        a {
-            color: $orangeWeb;
-        }
-    }
-
-    p {
-        font-size: 0.75rem;
-        margin-top: 5px;
-        margin-bottom: 15px;
-    }
-}
-
 .about {
     @include flexCenter(column, $gunMetal);
     color: #EEF0F2;
+    font-size: 1.5rem;
 
     h1 {
         margin-bottom: 40px;
@@ -280,3 +256,27 @@ input[type=text], textarea {
     box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $orangeWeb;
+    background: $richBlack;
+    color: $orangeWeb;
+    
+    .social-links {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 5px;
+
+        a {
+            color: $orangeWeb;
+        }
+    }
+
+    p {
+        font-size: 0.75rem;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+}

@@ -91,37 +91,6 @@ header .portrait {
   border-radius: 19px;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top: 1px solid #FCA311;
-  background: #011627;
-  color: #FCA311;
-}
-
-footer .social-links {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-footer .social-links a {
-  color: #FCA311;
-}
-
-footer p {
-  font-size: 0.75rem;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,6 +108,7 @@ footer p {
           flex-direction: column;
   background: #18252F;
   color: #EEF0F2;
+  font-size: 1.5rem;
 }
 
 .about h1 {
@@ -348,5 +318,36 @@ input[type=text], textarea {
 #send-btn:hover {
   -webkit-box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
           box-shadow: 0 0 5px #FFB703, 0 0 10px #FFB703, 0 0 20px #FFB703;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #FCA311;
+  background: #011627;
+  color: #FCA311;
+}
+
+footer .social-links {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+footer .social-links a {
+  color: #FCA311;
+}
+
+footer p {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
