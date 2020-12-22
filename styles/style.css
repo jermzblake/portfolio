@@ -120,6 +120,7 @@ header .portrait {
 .about p {
   margin-left: 10px;
   margin-right: 10px;
+  max-width: 1200px;
 }
 
 .about p:last-child {
