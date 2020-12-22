@@ -218,7 +218,7 @@ transform: rotateY(180deg);
     // @include flexCenter(column, $gunMetal);
     min-height: 80vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     background: $gunMetal;
@@ -299,6 +299,20 @@ footer {
 }
 
 @media only screen and (min-width : 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .nav-list {
+            display: inline-block;
+        }
+
+        #nav-menu {
+            display: none;
+        }
+    }
+
     .about {
         @include flexCenter(column, $gunMetal);
         font-size: 1.5rem;

@@ -257,8 +257,9 @@ header .portrait {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -369,6 +370,21 @@ footer p {
 }
 
 @media only screen and (min-width: 768px) {
+  nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .nav-list {
+    display: inline-block;
+  }
+  nav #nav-menu {
+    display: none;
+  }
   .about {
     display: -webkit-box;
     display: -ms-flexbox;
