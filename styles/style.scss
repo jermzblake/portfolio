@@ -81,8 +81,8 @@ header {
     color: $orangeWeb;
 
     .portrait {
-        height: 200px;
-        width: 200px;
+        height: auto;
+        width: auto;
         border-radius: 19px;
     }
 }
@@ -253,8 +253,6 @@ input[type=text], textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-
-
 .ficons {
     margin-right: 6px;
     margin-top: 6px; 
@@ -318,6 +316,16 @@ footer {
         }
     }
 
+    header {
+        h1 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
     .about {
         @include flexCenter(column, $gunMetal);
         font-size: 1.5rem;
@@ -365,8 +373,6 @@ footer {
             }
         }
     }
-
-
 
     .contact-form {
         width: 75%;

@@ -87,8 +87,8 @@ header {
 }
 
 header .portrait {
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: auto;
   border-radius: 19px;
 }
 
@@ -387,6 +387,12 @@ footer p {
   }
   nav #nav-menu {
     display: none;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  header h3 {
+    font-size: 2rem;
   }
   .about {
     display: -webkit-box;
