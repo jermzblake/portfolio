@@ -22,7 +22,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 2rem;
   padding-bottom: 5px;
   border-bottom: 1px solid #FCA311;
   z-index: 1;
@@ -90,6 +89,47 @@ header .portrait {
   height: auto;
   width: auto;
   border-radius: 19px;
+}
+
+header .arrow-down {
+  font-size: 40px;
+  position: absolute;
+  bottom: 0;
+}
+
+header .arrow-down i {
+  -webkit-animation: bounce 2s ease infinite;
+          animation: bounce 2s ease infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .about {

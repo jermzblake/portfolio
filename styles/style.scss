@@ -33,7 +33,6 @@ nav {
     display: flex;
     width: 100%;
     flex-direction: column;
-    font-size: 2rem;
     padding-bottom: 5px;
     border-bottom: 1px solid $orangeWeb;
     z-index: 1;
@@ -84,6 +83,27 @@ header {
         height: auto;
         width: auto;
         border-radius: 19px;
+    }
+    
+    .arrow-down {
+        font-size: 40px;
+        position: absolute;
+        bottom: 0;
+
+        i {
+            animation: bounce 2s ease infinite;
+          }
+          @keyframes bounce {
+              0% {
+                  transform: translateY(0);
+              }
+              50% {
+                  transform: translateY(-30px);
+              }
+              100% {
+                  transform: translateY(0);
+              }
+          }
     }
 }
 
