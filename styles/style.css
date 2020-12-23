@@ -28,15 +28,20 @@ nav {
 }
 
 nav .logo {
-  font-size: 1.75rem;
-  font-weight: bold;
   margin-left: 5px;
+  height: 35px;
+  width: 45px;
+  margin-top: 3px;
 }
 
 nav a {
   text-decoration: none;
   color: #FCA311;
   font-size: 1.5rem;
+}
+
+nav a:hover {
+  font-weight: bold;
 }
 
 nav ul {
