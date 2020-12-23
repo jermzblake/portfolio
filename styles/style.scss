@@ -82,6 +82,8 @@ header {
     .portrait {
         height: auto;
         width: auto;
+        max-height: 300px;
+        max-width: 300px;
         border-radius: 19px;
     }
     
@@ -110,7 +112,7 @@ header {
 .about {
     @include flexCenter(column, $gunMetal);
     color: #EEF0F2;
-    height: auto;
+    height: 100vh;
 
     h1 {
         margin-top: 20px;
@@ -343,6 +345,11 @@ footer {
 
         h3 {
             font-size: 2rem;
+        }
+
+        .portrait {
+            max-height: 900px;
+            max-width: 775px;
         }
     }
 

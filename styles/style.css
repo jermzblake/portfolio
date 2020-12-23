@@ -88,6 +88,8 @@ header {
 header .portrait {
   height: auto;
   width: auto;
+  max-height: 300px;
+  max-width: 300px;
   border-radius: 19px;
 }
 
@@ -149,7 +151,7 @@ header .arrow-down i {
           flex-direction: column;
   background: #18252F;
   color: #EEF0F2;
-  height: auto;
+  height: 100vh;
 }
 
 .about h1 {
@@ -433,6 +435,10 @@ footer p {
   }
   header h3 {
     font-size: 2rem;
+  }
+  header .portrait {
+    max-height: 900px;
+    max-width: 775px;
   }
   .about {
     display: -webkit-box;
