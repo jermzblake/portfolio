@@ -40,6 +40,7 @@ nav {
     .logo {
         font-size: 1.75rem;
         font-weight: bold;
+        margin-left: 5px;
     }
 
     a {
@@ -54,9 +55,9 @@ nav {
 
     #nav-menu {
         position: absolute;
-        align-self: flex-end;
-        // top: 5px;
-        // right: 10px;
+        // align-self: flex-end;
+        top: 0px;
+        right: 0px;
         // border: 1px solid $orangeWeb;
         // border-radius: 15px;
 
@@ -72,6 +73,7 @@ nav {
     .show {
         display: flex;
         flex-direction: column;
+        margin-left: 5px;
     }
 }
 
