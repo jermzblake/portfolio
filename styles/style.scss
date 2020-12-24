@@ -17,10 +17,13 @@ $orangeWeb: #FCA311;
 $gunMetal: #18252F;
 
 * {
-    font-family: $sourceCode;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: $sourceCode;
 }
 
 .material-icons {
@@ -80,14 +83,13 @@ nav {
 }
 
 header {
-    @include flexCenter(row, $richBlack);
+    @include flexCenter(column, $richBlack);
     color: $orangeWeb;
 
     .portrait {
         height: auto;
-        width: auto;
         max-height: 300px;
-        max-width: 300px;
+        max-width: 100%;
         border-radius: 19px;
     }
     
@@ -149,12 +151,19 @@ header {
         margin-bottom: 20px;
         font-size: xx-large;
     }
+
+    .project-cards-container {
+        width: 90%;
+        display: block;
+    }
 }
 
 .project-card {
     height: 480px;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     background: transparent;
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
@@ -319,7 +328,7 @@ footer {
     }
 }
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 960px) {
 
     nav {
         flex-direction: row;
@@ -335,6 +344,7 @@ footer {
     }
 
     header {
+        flex-direction: row;
         h1 {
             font-size: 3rem;
         }

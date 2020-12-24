@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
 * {
-  font-family: "Source Code Pro", monospace;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
 }
 
 .material-icons {
@@ -84,19 +87,18 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #011627;
   color: #FCA311;
 }
 
 header .portrait {
   height: auto;
-  width: auto;
   max-height: 300px;
-  max-width: 300px;
+  max-width: 100%;
   border-radius: 19px;
 }
 
@@ -203,10 +205,17 @@ header .arrow-down i {
   font-size: xx-large;
 }
 
+.portfolio .project-cards-container {
+  width: 90%;
+  display: block;
+}
+
 .project-card {
   height: 480px;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   background: transparent;
+  margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 15px;
@@ -422,7 +431,7 @@ footer p {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 960px) {
   nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -437,6 +446,12 @@ footer p {
   }
   nav #nav-menu {
     display: none;
+  }
+  header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   header h1 {
     font-size: 3rem;
