@@ -358,7 +358,8 @@ header .arrow-down i {
   width: 100%;
 }
 
-input[type=text], textarea {
+input[type=text],
+input[type=email], textarea {
   width: 80%;
   /* Full width */
   padding: 12px;
@@ -375,6 +376,10 @@ input[type=text], textarea {
   margin-bottom: 16px;
   /* Bottom margin */
   resize: vertical;
+}
+
+input:valid {
+  border: 2px solid #011627;
 }
 
 .ficons {
