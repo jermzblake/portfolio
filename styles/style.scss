@@ -45,6 +45,7 @@ nav {
         height: 35px;
         width: 45px;
         margin-top: 3px;
+        padding-bottom: 3px;
     }
 
     a {
@@ -63,7 +64,7 @@ nav {
 
     #nav-menu {
         position: absolute;
-        top: 0px;
+        top: 3px;
         right: 0px;
 
         :hover {
@@ -341,6 +342,7 @@ footer {
 
         .nav-list {
             display: inline-block;
+            align-self: center;
         }
 
         #nav-menu {

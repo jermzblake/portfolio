@@ -36,11 +36,3 @@ logoLink.addEventListener('click', (e) => {
     home.scrollIntoView({behavior:"smooth"});
     e.preventDefault();
 })
-
-// window.addEventListener('hashchange', function (e) {
-//     const location = (window.location.hash);
-//     const sectionToShow = location.substring(1);
-//     console.log(sectionToShow);
-//     sectionToShow.scrollIntoView({behavior:"smooth"});
-//     e.preventDefault();
-// }, false)

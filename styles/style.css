@@ -35,6 +35,7 @@ nav .logo {
   height: 35px;
   width: 45px;
   margin-top: 3px;
+  padding-bottom: 3px;
 }
 
 nav a {
@@ -53,7 +54,7 @@ nav ul {
 
 nav #nav-menu {
   position: absolute;
-  top: 0px;
+  top: 3px;
   right: 0px;
 }
 
@@ -448,6 +449,9 @@ footer p {
   }
   nav .nav-list {
     display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   nav #nav-menu {
     display: none;
