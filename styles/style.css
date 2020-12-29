@@ -105,6 +105,11 @@ header .portrait {
   border-radius: 19px;
 }
 
+header a {
+  text-decoration: none;
+  color: #FCA311;
+}
+
 header .arrow-down {
   font-size: 40px;
   position: absolute;

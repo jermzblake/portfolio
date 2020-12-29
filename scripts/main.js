@@ -11,6 +11,7 @@ let about = document.getElementById("about");
 let portfolio = document.getElementById("portfolio");
 let contact = document.getElementById("contact");
 let home = document.getElementById("home");
+let arrowLink =  document.getElementById("arrow-link");
 
 // event listeners
 hamMenu.addEventListener('click', () => {
@@ -34,5 +35,10 @@ contactLink.addEventListener('click', (e) => {
 
 logoLink.addEventListener('click', (e) => {
     home.scrollIntoView({behavior:"smooth"});
+    e.preventDefault();
+})
+
+arrowLink.addEventListener('click', (e) => {
+    about.scrollIntoView({behavior:"smooth"});
     e.preventDefault();
 })
