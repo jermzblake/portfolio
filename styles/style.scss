@@ -35,7 +35,8 @@ nav {
     position: fixed;
     background: $richBlack;
     display: flex;
-    width: 100%;
+    width: 100%;   // for browsers that don't support vw
+    width: 100vw;
     flex-direction: column;
     padding-bottom: 5px;
     border-bottom: 1px solid $orangeWeb;
