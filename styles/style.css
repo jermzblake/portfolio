@@ -168,7 +168,7 @@ header .arrow-down i {
           flex-direction: column;
   background: #18252F;
   color: #EEF0F2;
-  height: 100vh;
+  height: auto;
 }
 
 .about h1 {
@@ -183,8 +183,15 @@ header .arrow-down i {
   max-width: 1200px;
 }
 
-.about p:last-child {
-  margin-bottom: 20px;
+.about h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.about .skills {
+  font-size: 3.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .portfolio {
@@ -500,12 +507,13 @@ footer p {
             flex-direction: column;
     background: #18252F;
     font-size: 1.5rem;
+    height: 100vh;
   }
   .about h1 {
-    margin-top: 0;
+    margin-top: 20px;
   }
-  .about p:last-child {
-    margin-bottom: 0;
+  .about h2 {
+    font-size: x-large;
   }
   .portfolio {
     height: 1350px;

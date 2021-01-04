@@ -126,7 +126,7 @@ header {
 .about {
     @include flexCenter(column, $gunMetal);
     color: #EEF0F2;
-    height: 100vh;
+    height: auto;
 
     h1 {
         margin-top: 20px;
@@ -140,8 +140,15 @@ header {
         max-width: 1200px;
     }
 
-    p:last-child {
-        margin-bottom: 20px;
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .skills {
+        font-size: 3.5rem;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -382,13 +389,14 @@ footer {
     .about {
         @include flexCenter(column, $gunMetal);
         font-size: 1.5rem;
+        height: 100vh;
 
         h1 {
-            margin-top: 0;
+            margin-top: 20px;
         }
 
-        p:last-child {
-            margin-bottom: 0;
+        h2 {
+            font-size: x-large;
         }
     }
 
