@@ -317,6 +317,10 @@ header .arrow-down i {
           transform: rotateY(180deg);
 }
 
+.project-card-back h3 {
+  font-size: 2rem;
+}
+
 .project-card-back p {
   font-size: 1rem;
 }
