@@ -406,8 +406,9 @@ footer {
     }
 
     .portfolio {
-        height: 1350px;
+        height: fit-content;
         justify-content: space-around;
+        padding-bottom: 3em;
 
         .project-cards-container {
             width: 80%;
@@ -436,6 +437,16 @@ footer {
             .p4 {
                 grid-column: 3 / 4;
                 grid-row: 3 / 4;
+            }
+
+            .p5 {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
+
+            .p6 {
+                grid-column: 3 / 4;
+                grid-row: 4 / 5;
             }
         }
     }

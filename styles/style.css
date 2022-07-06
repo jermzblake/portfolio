@@ -521,9 +521,12 @@ footer p {
     font-size: x-large;
   }
   .portfolio {
-    height: 1350px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding-bottom: 3em;
   }
   .portfolio .project-cards-container {
     width: 80%;
@@ -568,6 +571,22 @@ footer p {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
+  }
+  .portfolio .project-cards-container .p5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  .portfolio .project-cards-container .p6 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
   }
   .contact-form {
     width: 75%;
