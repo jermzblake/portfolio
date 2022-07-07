@@ -417,7 +417,7 @@ footer {
             height: 80%;
             display: grid;
             grid-template-columns: 360px auto 360px;
-            grid-template-rows: auto 40px auto;
+            grid-template-rows: min-content min-content min-content;
 
             .p1 {
                 grid-column: 1 / 2;
