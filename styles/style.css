@@ -128,6 +128,9 @@ header .arrow-down i {
   margin-left: 10px;
   margin-right: 10px;
 }
+.about .aws-cp {
+  margin-bottom: 1em;
+}
 
 .portfolio {
   display: flex;
@@ -197,9 +200,7 @@ header .arrow-down i {
 .project-card-front img {
   height: 90%;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: 50% 50%;
   object-position: 50% 50%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -260,8 +261,8 @@ header .arrow-down i {
   width: 100%;
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   width: 80%; /* Full width */
   padding: 12px; /* Some padding */
@@ -270,7 +271,7 @@ textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 input:valid {
@@ -295,10 +296,7 @@ input:valid {
 }
 
 #send-btn:hover {
-  box-shadow:
-    0 0 5px #ffb703,
-    0 0 10px #ffb703,
-    0 0 20px #ffb703;
+  box-shadow: 0 0 5px #ffb703, 0 0 10px #ffb703, 0 0 20px #ffb703;
 }
 
 footer {
@@ -371,7 +369,6 @@ footer p {
     font-size: x-large;
   }
   .portfolio {
-    height: -moz-fit-content;
     height: fit-content;
     justify-content: space-around;
     padding-bottom: 3em;
@@ -417,6 +414,9 @@ footer p {
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  .detail-card p {
+    text-align: left;
+  }
   .contact-form {
     width: 75%;
   }
@@ -427,4 +427,6 @@ footer p {
   .contact-form #send-btn {
     width: 90%;
   }
-} /*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
