@@ -144,6 +144,7 @@ header .arrow-down i {
   background: rgba(238, 240, 242, 0.14);
 }
 .about .aws-cp {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -242,9 +243,9 @@ header .arrow-down i {
   height: 90%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: 50% 50%;
-  object-position: 50% 50%;
+     object-position: 50% 50%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
@@ -317,10 +318,35 @@ header .arrow-down i {
 .contact .contact-form .input-container {
   display: flex;
   width: 100%;
+  max-width: 650px;
+  align-items: center;
+  gap: 8px;
+}
+.contact .contact-form label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  flex: 0 0 48px;
+}
+.contact .contact-form input[type=text],
+.contact .contact-form input[type=email],
+.contact .contact-form textarea {
+  flex: 1 1 auto;
+  width: auto;
+}
+.contact .contact-form #send-btn {
+  flex: 1 1 auto;
+  width: auto;
+  max-width: none;
+}
+.contact .contact-form form {
+  width: 100%;
+  max-width: 650px;
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   width: 80%; /* Full width */
   padding: 12px; /* Some padding */
@@ -354,10 +380,7 @@ input:valid {
 }
 
 #send-btn:hover {
-  box-shadow:
-    0 0 5px #ffb703,
-    0 0 10px #ffb703,
-    0 0 20px #ffb703;
+  box-shadow: 0 0 5px #ffb703, 0 0 10px #ffb703, 0 0 20px #ffb703;
 }
 
 footer {
@@ -513,4 +536,4 @@ footer p {
     transform: translateY(0);
     opacity: 0.85;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
