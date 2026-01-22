@@ -187,8 +187,7 @@ header .arrow-down i {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  -webkit-backface-visibility: hidden; /* Safari */
+  border-radius: 15px; /* Safari */
   backface-visibility: hidden;
 }
 
@@ -200,8 +199,10 @@ header .arrow-down i {
 .project-card-front img {
   height: 90%;
   width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
@@ -236,6 +237,21 @@ header .arrow-down i {
   color: #011627;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.detail-card p {
+  text-align: left;
+}
+
+.inner-content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.inner-content p {
+  margin-bottom: 1.5em;
+}
+.inner-content p:last-child {
+  margin-bottom: 0;
 }
 
 .contact {
@@ -369,6 +385,7 @@ footer p {
     font-size: x-large;
   }
   .portfolio {
+    height: -moz-fit-content;
     height: fit-content;
     justify-content: space-around;
     padding-bottom: 3em;
@@ -414,9 +431,6 @@ footer p {
     grid-column: 1/2;
     grid-row: 1/2;
   }
-  .detail-card p {
-    text-align: left;
-  }
   .contact-form {
     width: 75%;
   }
@@ -427,6 +441,4 @@ footer p {
   .contact-form #send-btn {
     width: 90%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
