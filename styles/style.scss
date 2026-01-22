@@ -15,6 +15,8 @@ $sourceCode: "Source Code Pro", monospace;
 $richBlack: #011627;
 $orangeWeb: #fca311;
 $gunMetal: #18252f;
+$skill-bg: rgba(238, 240, 242, 0.08);
+$skill-bg-strong: rgba(238, 240, 242, 0.14);
 
 * {
   padding: 0;
@@ -149,6 +151,23 @@ header {
     font-size: 3.5rem;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .skills img {
+    height: 3.5rem;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 0.25em;
+    padding: 0.35rem;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .skills img:hover,
+  .skills img:focus {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+    background: $skill-bg-strong;
   }
 
   .aws-cp {
@@ -427,6 +446,11 @@ footer {
 
     h2 {
       font-size: x-large;
+    }
+
+    .skills img {
+      height: 4rem;
+      padding: 0.45rem;
     }
   }
 

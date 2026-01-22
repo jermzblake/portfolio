@@ -128,6 +128,21 @@ header .arrow-down i {
   margin-left: 10px;
   margin-right: 10px;
 }
+.about .skills img {
+  height: 3.5rem;
+  width: auto;
+  vertical-align: middle;
+  margin: 0 0.25em;
+  padding: 0.35rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+.about .skills img:hover,
+.about .skills img:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  background: rgba(238, 240, 242, 0.14);
+}
 .about .aws-cp {
   margin-bottom: 1em;
 }
@@ -383,6 +398,10 @@ footer p {
   }
   .about h2 {
     font-size: x-large;
+  }
+  .about .skills img {
+    height: 4rem;
+    padding: 0.45rem;
   }
   .portfolio {
     height: -moz-fit-content;
