@@ -19,7 +19,7 @@ html::-webkit-scrollbar-track {
 }
 html::-webkit-scrollbar-thumb {
   background: #fca311;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 2px solid #011627;
 }
 html::-webkit-scrollbar-thumb:hover {
