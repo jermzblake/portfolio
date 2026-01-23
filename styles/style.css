@@ -198,7 +198,7 @@ header .hero-visual .blob-backing {
 }
 header .ticker-wrap {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   width: 100%;
   overflow: hidden;
   background: rgba(24, 37, 47, 0.5);
@@ -222,15 +222,6 @@ header .ticker-wrap .item:before {
   content: "//";
   color: #fca311;
   margin-right: 8px;
-}
-header .arrow-down {
-  position: absolute;
-  bottom: 5px;
-}
-header .arrow-down i {
-  font-size: 1em;
-  color: #fca311;
-  animation: bounce 2s ease infinite;
 }
 
 @keyframes marquee {
@@ -290,6 +281,9 @@ header .arrow-down i {
     height: 400px;
     right: -20px;
     top: -20px;
+  }
+  header .ticker-wrap {
+    bottom: 2rem;
   }
 }
 .about {

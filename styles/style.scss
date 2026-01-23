@@ -257,7 +257,7 @@ header {
   // Ticker Animation
   .ticker-wrap {
     position: absolute;
-    bottom: 2rem; // Just above the bounce arrow (or replace it)
+    bottom: 1rem;
     width: 100%;
     overflow: hidden;
     background: rgba(24, 37, 47, 0.5); // Semi-transparent gunMetal
@@ -283,18 +283,6 @@ header {
         color: $orangeWeb;
         margin-right: 8px;
       }
-    }
-  }
-
-  // Bounce Arrow
-  .arrow-down {
-    position: absolute;
-    bottom: 5px;
-
-    i {
-      font-size: 1em;
-      color: $orangeWeb;
-      animation: bounce 2s ease infinite;
     }
   }
 }
@@ -367,6 +355,10 @@ header {
         right: -20px;
         top: -20px;
       }
+    }
+
+    .ticker-wrap {
+      bottom: 2rem;
     }
   }
 }
