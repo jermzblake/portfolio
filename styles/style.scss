@@ -362,28 +362,6 @@ header {
     margin-bottom: 30px;
   }
 
-  .skills {
-    font-size: 3.5rem;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .skills img {
-    height: 3.5rem;
-    width: auto;
-    vertical-align: middle;
-    margin: 0 0.25em;
-    padding: 0.35rem;
-    border-radius: 10px;
-    display: inline-block;
-  }
-
-  .skills img:hover,
-  .skills img:focus {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-  }
-
   .aws-cp {
     margin-top: 2em;
     margin-bottom: 1em;
@@ -697,11 +675,6 @@ footer {
 
     h2 {
       font-size: x-large;
-    }
-
-    .skills img {
-      height: 6rem;
-      padding: 0.45rem;
     }
   }
 
