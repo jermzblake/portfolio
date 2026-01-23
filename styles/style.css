@@ -807,8 +807,17 @@ footer .footer-strip .built-with {
 footer .footer-strip .built-with .separator {
   color: #fca311;
   margin: 0 8px;
+  animation: separator-blink 1.1s steps(1, end) infinite;
 }
 
+@keyframes separator-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
 @media only screen and (min-width: 960px) {
   nav {
     flex-direction: row;
@@ -862,6 +871,10 @@ footer .footer-strip .built-with .separator {
     grid-row: 2/3;
   }
 }
+.mobile-break {
+  display: none;
+}
+
 @media only screen and (max-width: 959px) {
   .portfolio .section-hint {
     display: block;
@@ -869,6 +882,9 @@ footer .footer-strip .built-with .separator {
   .project-card-front::after {
     display: flex;
     animation: tapPulse 2s ease-in-out infinite;
+  }
+  .mobile-break {
+    display: block;
   }
 }
 @keyframes tapPulse {
