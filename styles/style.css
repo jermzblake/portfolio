@@ -621,34 +621,22 @@ footer p {
     grid-template-rows: min-content min-content min-content;
   }
   .portfolio .project-cards-container .p1 {
-    grid-column: 3/4;
-    grid-row: 5/6;
+    grid-column: 2/3;
+    grid-row: 3/4;
   }
   .portfolio .project-cards-container .p2 {
-    grid-column: 1/2;
-    grid-row: 5/6;
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
   .portfolio .project-cards-container .p3 {
-    grid-column: 3/4;
-    grid-row: 4/5;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
   .portfolio .project-cards-container .p4 {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-  .portfolio .project-cards-container .p5 {
-    grid-column: 3/4;
-    grid-row: 3/4;
-  }
-  .portfolio .project-cards-container .p6 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .portfolio .project-cards-container .p7 {
     grid-column: 3/4;
     grid-row: 1/2;
   }
-  .portfolio .project-cards-container .p8 {
+  .portfolio .project-cards-container .p5 {
     grid-column: 1/2;
     grid-row: 1/2;
   }
