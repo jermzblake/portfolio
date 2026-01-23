@@ -7,28 +7,31 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Quicksand", sans-serif;
-  width: 100%;
+html {
   scrollbar-width: thin;
   scrollbar-color: #eef0f2 #011627;
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 12px;
 }
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: #011627;
 }
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background: #eef0f2;
   border-radius: 6px;
   border: 2px solid #011627;
 }
-body::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover {
   background: #fca311;
 }
-body::-webkit-scrollbar-thumb:active {
+html::-webkit-scrollbar-thumb:active {
   background: rgb(215.2863070539, 134.7800829876, 2.7136929461);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
 }
 
 .material-icons {
@@ -344,7 +347,7 @@ header .ticker-wrap .item:before {
     flex: 0 0 250px;
     margin-top: 0;
   }
-  .about .credentials-wrapper .aws-cp {
+  .about .aws-cp {
     background: #011627;
   }
 }

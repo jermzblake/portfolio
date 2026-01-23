@@ -34,11 +34,8 @@ $prussianBlue: #020022;
   box-sizing: border-box;
 }
 
-body {
-  font-family: $quicksand;
-  width: 100%;
-
-  // Custom scrollbar styling
+html {
+  // Custom scrollbar styling on the scrollable element
   scrollbar-width: thin; // Firefox
   scrollbar-color: $lighterText $richBlack; // Firefox: thumb track
 
@@ -64,6 +61,11 @@ body {
       background: color.adjust($orangeWeb, $lightness: -10%);
     }
   }
+}
+
+body {
+  font-family: $quicksand;
+  width: 100%;
 }
 
 .material-icons {
@@ -424,10 +426,10 @@ header {
     .credentials-wrapper {
       flex: 0 0 250px;
       margin-top: 0;
+    }
 
-      .aws-cp {
-        background: $richBlack;
-      }
+    .aws-cp {
+      background: $richBlack;
     }
   }
 }
