@@ -415,7 +415,7 @@ header {
   color: $orangeWeb;
   background: $richBlack;
 
-  h1 {
+  h2 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: xx-large;
@@ -574,7 +574,7 @@ header {
   background: $gunMetal;
   color: $lighterText;
 
-  h1 {
+  h2 {
     font-size: xx-large;
   }
 
@@ -685,6 +685,7 @@ footer {
   }
 }
 
+// DESKTOP OVERRIDES
 @media only screen and (min-width: 960px) {
   nav {
     flex-direction: row;

@@ -343,7 +343,7 @@ header .arrow-down i {
   color: #fca311;
   background: #011627;
 }
-.portfolio h1 {
+.portfolio h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: xx-large;
@@ -492,7 +492,7 @@ header .arrow-down i {
   background: #18252f;
   color: #eef0f2;
 }
-.contact h1 {
+.contact h2 {
   font-size: xx-large;
 }
 .contact .contact-form {
