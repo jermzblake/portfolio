@@ -344,6 +344,9 @@ header .ticker-wrap .item:before {
     flex: 0 0 250px;
     margin-top: 0;
   }
+  .about .credentials-wrapper .aws-cp {
+    background: #011627;
+  }
 }
 
 .portfolio {

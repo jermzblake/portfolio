@@ -127,9 +127,9 @@ nav {
 
 header {
   @include flexCenter(column, $richBlack);
-  color: $lighterText; // Lighter text for better contrast on dark
+  color: $lighterText;
   position: relative;
-  overflow: hidden; // Keeps the ticker from stretching page width
+  overflow: hidden;
 
   .hero-container {
     display: flex;
@@ -424,6 +424,10 @@ header {
     .credentials-wrapper {
       flex: 0 0 250px;
       margin-top: 0;
+
+      .aws-cp {
+        background: $richBlack;
+      }
     }
   }
 }
