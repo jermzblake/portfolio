@@ -19,8 +19,10 @@ $quicksand: "Quicksand", sans-serif;
 $richBlack: #011627;
 $orangeWeb: #fca311;
 $gunMetal: #18252f;
-$skill-bg: rgba(238, 240, 242, 0.08);
-$skill-bg-strong: rgba(238, 240, 242, 0.14);
+$lighterText: #eef0f2;
+$offWhite: #e2e8f0;
+$mutedBlue: #8892b0;
+$heroHook: #a8b2d1;
 
 * {
   padding: 0;
@@ -46,7 +48,8 @@ nav {
   flex-direction: column;
   padding-bottom: 5px;
   border-bottom: 1px solid $orangeWeb;
-  z-index: 1;
+  z-index: 4444; /* raised and guaranteed above transformed header children */
+  isolation: isolate; /* ensure its own stacking context */
 
   .logo {
     margin-left: 5px;
@@ -93,37 +96,245 @@ nav {
 
 header {
   @include flexCenter(column, $richBlack);
-  color: $orangeWeb;
+  color: $lighterText; // Lighter text for better contrast on dark
+  position: relative;
+  overflow: hidden; // Keeps the ticker from stretching page width
+  padding-top: 60px; // Account for fixed nav
 
-  .portrait {
-    height: auto;
-    max-height: 300px;
-    max-width: 100%;
-    border-radius: 19px;
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse; // Image on top for mobile
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 2;
+    margin-bottom: 2rem;
   }
 
-  a {
-    text-decoration: none;
-    color: $orangeWeb;
+  // Typography & Content
+  .hero-content {
+    text-align: center;
+    margin-top: 2rem;
+
+    .greeting {
+      font-family: $sourceCode;
+      color: $orangeWeb;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 700;
+
+      .highlight {
+        color: $orangeWeb;
+        position: relative;
+        white-space: nowrap;
+      }
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: $mutedBlue;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero-hook {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      color: $heroHook;
+
+      strong {
+        color: $lighterText;
+      }
+    }
   }
 
-  .arrow-down {
-    font-size: 40px;
+  // Buttons
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-family: $sourceCode;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: $orangeWeb;
+      color: $richBlack;
+      font-weight: bold;
+      border: 1px solid $orangeWeb;
+
+      &:hover {
+        background: transparent;
+        color: $orangeWeb;
+      }
+    }
+
+    .btn-outline {
+      border: 1px solid $orangeWeb;
+      color: $orangeWeb;
+
+      &:hover {
+        background: rgba(252, 163, 17, 0.1);
+      }
+    }
+  }
+
+  // Visuals & Blob
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .portrait {
+      position: relative;
+      height: auto;
+      width: 200px;
+      border-radius: 50%; // Circle on mobile
+      border: 3px solid $orangeWeb;
+      z-index: 2;
+      object-fit: cover;
+    }
+
+    // Abstract "Blob" behind image
+    .blob-backing {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: rgba(252, 163, 17, 0.15); // Low opacity orange
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      animation: morph 8s ease-in-out infinite;
+      z-index: 1;
+    }
+  }
+
+  // Ticker Animation
+  .ticker-wrap {
     position: absolute;
-    bottom: 0;
+    bottom: 2rem; // Just above the bounce arrow (or replace it)
+    width: 100%;
+    overflow: hidden;
+    background: rgba(24, 37, 47, 0.5); // Semi-transparent gunMetal
+    border-top: 1px solid rgba(252, 163, 17, 0.3);
+    border-bottom: 1px solid rgba(252, 163, 17, 0.3);
+    padding: 10px 0;
+    white-space: nowrap;
+
+    .ticker {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+
+    .item {
+      display: inline-block;
+      padding: 0 2rem;
+      font-family: $sourceCode;
+      font-size: 1rem;
+      color: $mutedBlue;
+
+      &:before {
+        content: "//";
+        color: $orangeWeb;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  // Bounce Arrow
+  .arrow-down {
+    position: absolute;
+    bottom: 5px;
 
     i {
+      font-size: 1em;
+      color: $orangeWeb;
       animation: bounce 2s ease infinite;
     }
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
+  }
+}
+
+// Keyframes
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+// DESKTOP OVERRIDES
+@media only screen and (min-width: 960px) {
+  header {
+    .hero-container {
+      flex-direction: row; // Side by side
+      justify-content: space-between;
+      text-align: left;
+      height: 70vh; // Give it vertical breathing room
+    }
+
+    .hero-content {
+      text-align: left;
+      flex: 1;
+      padding-right: 2rem;
+
+      h1 {
+        font-size: 3.5rem;
       }
-      50% {
-        transform: translateY(-30px);
+      .hero-hook {
+        margin: 0 0 2rem 0;
+        font-size: 1.1rem;
       }
-      100% {
-        transform: translateY(0);
+      .hero-btns {
+        justify-content: flex-start;
+      }
+    }
+
+    .hero-visual {
+      flex: 1;
+      justify-content: center;
+
+      .portrait {
+        width: 350px;
+        height: auto;
+        border-radius: 20px; // Soft square on desktop
+        box-shadow: 20px 20px 0px rgba(252, 163, 17, 0.1); // Offset shadow style
+        border: none;
+      }
+
+      .blob-backing {
+        width: 400px;
+        height: 400px;
+        right: -20px;
+        top: -20px;
       }
     }
   }
@@ -131,7 +342,7 @@ header {
 
 .about {
   @include flexCenter(column, $gunMetal);
-  color: #eef0f2;
+  color: $lighterText;
   height: auto;
 
   h1 {
@@ -171,7 +382,6 @@ header {
   .skills img:focus {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-    background: $skill-bg-strong;
   }
 
   .aws-cp {
@@ -346,7 +556,7 @@ header {
   align-items: center;
   flex-direction: column;
   background: $gunMetal;
-  color: #eef0f2;
+  color: $lighterText;
 
   h1 {
     font-size: xx-large;
@@ -472,28 +682,6 @@ footer {
 
     #nav-menu {
       display: none;
-    }
-  }
-
-  header {
-    flex-direction: row;
-
-    .intro {
-      margin-left: 15px;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    h3 {
-      font-size: 2rem;
-    }
-
-    .portrait {
-      max-height: 50%;
-      max-width: 60%;
-      margin-right: 15px;
     }
   }
 

@@ -25,7 +25,8 @@ nav {
   flex-direction: column;
   padding-bottom: 5px;
   border-bottom: 1px solid #fca311;
-  z-index: 1;
+  z-index: 4444; /* raised and guaranteed above transformed header children */
+  isolation: isolate; /* ensure its own stacking context */
 }
 nav .logo {
   margin-left: 5px;
@@ -69,38 +70,209 @@ header {
   height: 100vh;
   flex-direction: column;
   background: #011627;
+  color: #eef0f2;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+}
+header .hero-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+header .hero-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+header .hero-content .greeting {
+  font-family: "Source Code Pro", monospace;
   color: #fca311;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
-header .portrait {
-  height: auto;
-  max-height: 300px;
-  max-width: 100%;
-  border-radius: 19px;
+header .hero-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
-header a {
+header .hero-content h1 .highlight {
+  color: #fca311;
+  position: relative;
+  white-space: nowrap;
+}
+header .hero-content h2 {
+  font-size: 1.25rem;
+  color: #8892b0;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+header .hero-content .hero-hook {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #a8b2d1;
+}
+header .hero-content .hero-hook strong {
+  color: #eef0f2;
+}
+header .hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+header .hero-btns a {
   text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+header .hero-btns .btn-primary {
+  background: #fca311;
+  color: #011627;
+  font-weight: bold;
+  border: 1px solid #fca311;
+}
+header .hero-btns .btn-primary:hover {
+  background: transparent;
   color: #fca311;
+}
+header .hero-btns .btn-outline {
+  border: 1px solid #fca311;
+  color: #fca311;
+}
+header .hero-btns .btn-outline:hover {
+  background: rgba(252, 163, 17, 0.1);
+}
+header .hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .hero-visual .portrait {
+  position: relative;
+  height: auto;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #fca311;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .hero-visual .blob-backing {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(252, 163, 17, 0.15);
+  border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite;
+  z-index: 1;
+}
+header .ticker-wrap {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(24, 37, 47, 0.5);
+  border-top: 1px solid rgba(252, 163, 17, 0.3);
+  border-bottom: 1px solid rgba(252, 163, 17, 0.3);
+  padding: 10px 0;
+  white-space: nowrap;
+}
+header .ticker-wrap .ticker {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+header .ticker-wrap .item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  color: #8892b0;
+}
+header .ticker-wrap .item:before {
+  content: "//";
+  color: #fca311;
+  margin-right: 8px;
 }
 header .arrow-down {
-  font-size: 40px;
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
 }
 header .arrow-down i {
+  font-size: 1em;
+  color: #fca311;
   animation: bounce 2s ease infinite;
 }
-@keyframes bounce {
+
+@keyframes marquee {
   0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%);
   }
 }
-
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  header .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    height: 70vh;
+  }
+  header .hero-content {
+    text-align: left;
+    flex: 1;
+    padding-right: 2rem;
+  }
+  header .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  header .hero-content .hero-hook {
+    margin: 0 0 2rem 0;
+    font-size: 1.1rem;
+  }
+  header .hero-content .hero-btns {
+    justify-content: flex-start;
+  }
+  header .hero-visual {
+    flex: 1;
+    justify-content: center;
+  }
+  header .hero-visual .portrait {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px rgba(252, 163, 17, 0.1);
+    border: none;
+  }
+  header .hero-visual .blob-backing {
+    width: 400px;
+    height: 400px;
+    right: -20px;
+    top: -20px;
+  }
+}
 .about {
   display: flex;
   justify-content: center;
@@ -143,7 +315,6 @@ header .arrow-down i {
 .about .skills img:focus {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-  background: rgba(238, 240, 242, 0.14);
 }
 .about .aws-cp {
   margin-top: 2em;
@@ -420,23 +591,6 @@ footer p {
   }
   nav #nav-menu {
     display: none;
-  }
-  header {
-    flex-direction: row;
-  }
-  header .intro {
-    margin-left: 15px;
-  }
-  header h1 {
-    font-size: 3rem;
-  }
-  header h3 {
-    font-size: 2rem;
-  }
-  header .portrait {
-    max-height: 50%;
-    max-width: 60%;
-    margin-right: 15px;
   }
   .about {
     display: flex;
