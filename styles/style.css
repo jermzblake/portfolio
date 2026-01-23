@@ -9,7 +9,7 @@
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #eef0f2 #011627;
+  scrollbar-color: #fca311 #011627;
 }
 html::-webkit-scrollbar {
   width: 12px;
@@ -18,12 +18,12 @@ html::-webkit-scrollbar-track {
   background: #011627;
 }
 html::-webkit-scrollbar-thumb {
-  background: #eef0f2;
-  border-radius: 6px;
+  background: #fca311;
+  border-radius: 12px;
   border: 2px solid #011627;
 }
 html::-webkit-scrollbar-thumb:hover {
-  background: #fca311;
+  background: rgb(252.6348547718, 182.468879668, 67.3651452282);
 }
 html::-webkit-scrollbar-thumb:active {
   background: rgb(215.2863070539, 134.7800829876, 2.7136929461);

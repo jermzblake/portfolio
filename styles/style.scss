@@ -37,7 +37,7 @@ $prussianBlue: #020022;
 html {
   // Custom scrollbar styling on the scrollable element
   scrollbar-width: thin; // Firefox
-  scrollbar-color: $lighterText $richBlack; // Firefox: thumb track
+  scrollbar-color: $orangeWeb $richBlack; // Firefox: thumb track
 
   // Webkit browsers (Chrome, Safari, Edge)
   &::-webkit-scrollbar {
@@ -49,12 +49,12 @@ html {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $lighterText;
-    border-radius: 6px;
+    background: $orangeWeb;
+    border-radius: 12px;
     border: 2px solid $richBlack; // Creates padding effect
 
     &:hover {
-      background: $orangeWeb;
+      background: color.adjust($orangeWeb, $lightness: 10%);
     }
 
     &:active {
