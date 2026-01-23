@@ -282,24 +282,56 @@ header .arrow-down i {
   background: #18252f;
   color: #eef0f2;
   height: auto;
-}
-.about h1 {
-  margin-top: 20px;
-  margin-bottom: 40px;
-  font-size: xx-large;
-}
-.about p {
-  margin-left: 10px;
-  margin-right: 10px;
-  max-width: 1200px;
+  min-height: 80vh;
+  padding: 4rem 1rem;
 }
 .about h2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  font-size: xx-large;
+  margin-bottom: 2rem;
+  color: #fca311;
 }
-.about .aws-cp {
-  margin-top: 2em;
-  margin-bottom: 1em;
+.about .about-container {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.about .about-text strong {
+  color: #fca311;
+}
+.about .credentials-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .credentials-wrapper h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #8892b0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 960px) {
+  .about .about-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .about .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  .about .credentials-wrapper {
+    flex: 0 0 250px;
+    margin-top: 0;
+  }
 }
 
 .portfolio {
@@ -572,23 +604,6 @@ footer p {
   }
   nav #nav-menu {
     display: none;
-  }
-  .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background: #18252f;
-    font-size: 1.5rem;
-    height: auto;
-    min-height: 100vh;
-  }
-  .about h1 {
-    margin-top: 20px;
-  }
-  .about h2 {
-    font-size: x-large;
   }
   .portfolio {
     height: -moz-fit-content;
