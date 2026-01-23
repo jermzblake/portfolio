@@ -315,10 +315,10 @@ header {
 @media only screen and (min-width: 960px) {
   header {
     .hero-container {
-      flex-direction: row; // Side by side
+      flex-direction: row;
       justify-content: space-between;
       text-align: left;
-      height: 70vh; // Give it vertical breathing room
+      height: 70vh;
     }
 
     .hero-content {
@@ -585,11 +585,11 @@ header {
   padding-right: 10px;
 
   p {
-    margin-bottom: 1.5em; // Add spacing between paragraphs
+    margin-bottom: 1.5em;
   }
 
   p:last-child {
-    margin-bottom: 0; // Remove margin from last paragraph
+    margin-bottom: 0;
   }
 }
 
@@ -843,8 +843,8 @@ header {
     padding: 6rem 2rem;
 
     .contact-container {
-      flex-direction: row; // Side by Side
-      align-items: flex-start; // Align top
+      flex-direction: row;
+      align-items: flex-start;
       gap: 4rem;
     }
 
@@ -978,6 +978,7 @@ footer {
       grid-template-columns: 360px auto 360px;
       grid-template-rows: min-content min-content min-content;
 
+      /* Adjust grid areas for project cards */
       .p1 {
         grid-column: 2 / 3;
         grid-row: 5 / 6;
@@ -1010,6 +1011,7 @@ footer {
     }
   }
 }
+
 // Hide mobile-break by default
 .mobile-break {
   display: none;

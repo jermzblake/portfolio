@@ -844,6 +844,7 @@ footer .footer-strip .built-with .separator {
     display: grid;
     grid-template-columns: 360px auto 360px;
     grid-template-rows: min-content min-content min-content;
+    /* Adjust grid areas for project cards */
   }
   .portfolio .project-cards-container .p1 {
     grid-column: 2/3;
