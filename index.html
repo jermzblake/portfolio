@@ -494,43 +494,96 @@
       </div>
     </section>
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-form">
-        <form name="contact" method="POST" netlify>
-          <div class="input-container">
-            <label for="name"
-              ><i class="material-icons ficons">assignment_ind</i></label
-            >
-            <input
-              type="text"
-              name="name"
-              placeholder="NAME"
-              required
-              minlength="2"
-            />
+      <div class="contact-container">
+        <div class="contact-info animate__animated animate__fadeInLeft">
+          <div class="status-badge">
+            <span class="pulsing-dot"></span>
+            <span>Open for Opportunities</span>
           </div>
-          <div class="input-container">
-            <label for="email"
-              ><i class="material-icons ficons">alternate_email</i></label
-            >
-            <input type="email" name="email" placeholder="EMAIL" required />
+
+          <h2>Let's Build the Future.</h2>
+          <p class="intro-text">
+            I’m open to <strong>Full-Stack or Backend Engineering roles</strong>
+            and selective consulting engagements.
+          </p>
+          <p class="sub-text">
+            Whether you need an engineer to strengthen your backend, help shape
+            system design, or bring AI-enabled features into production, let’s
+            talk about how I can support your roadmap.
+          </p>
+
+          <div class="expertise-list">
+            <div class="expertise-item">
+              <i class="fas fa-server icon"></i>
+              <div class="text">
+                <h3>Backend & Platform Engineering</h3>
+                <p>Scalable APIs, data models, & cloud-native services</p>
+              </div>
+            </div>
+
+            <div class="expertise-item">
+              <i class="fas fa-brain icon"></i>
+              <div class="text">
+                <h3>Agentic AI Integration</h3>
+                <p>Semantic search, RAG pipelines, & agentic workflows</p>
+              </div>
+            </div>
+
+            <div class="expertise-item">
+              <i class="fas fa-users-cog icon"></i>
+              <div class="text">
+                <h3>Technical Leadership</h3>
+                <p>System design, code quality, & shared ownership</p>
+              </div>
+            </div>
           </div>
-          <div class="input-container">
-            <label for="message"
-              ><i class="material-icons ficons">message</i></label
-            >
-            <textarea
-              name="message"
-              placeholder="HOW CAN I HELP YOU?"
-              required
-            ></textarea>
-          </div>
-          <br />
-          <div class="input-container">
-            <label aria-hidden="true"></label>
-            <input id="send-btn" type="submit" value="SEND" />
-          </div>
-        </form>
+        </div>
+
+        <div
+          class="contact-form-wrapper animate__animated animate__fadeInRight"
+        >
+          <form name="contact" method="POST" netlify>
+            <h3>Send a Message</h3>
+
+            <div class="input-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                minlength="2"
+                placeholder=" "
+              />
+              <label for="name">Name</label>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder=" "
+              />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-group">
+              <textarea
+                name="message"
+                id="message"
+                required
+                placeholder=" "
+                rows="5"
+              ></textarea>
+              <label for="message">How can I help you?</label>
+            </div>
+
+            <button type="submit" id="send-btn">
+              SEND MESSAGE <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <footer>

@@ -25,6 +25,7 @@ $lighterText: #eef0f2;
 $offWhite: #e2e8f0;
 $mutedBlue: #8892b0;
 $heroHook: #a8b2d1;
+$openGreen: #2ecc71;
 
 * {
   padding: 0;
@@ -371,7 +372,7 @@ header {
 
 .about {
   @include flexCenter(column, $gunMetal);
-  color: #eef0f2;
+  color: $lighterText;
   height: auto;
   min-height: 80vh;
   padding: 4rem 1rem;
@@ -652,98 +653,314 @@ header {
   }
 }
 
+// .contact {
+//   min-height: 80vh;
+//   display: flex;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   flex-direction: column;
+//   background: $gunMetal;
+//   color: $lighterText;
+
+//   h2 {
+//     font-size: xx-large;
+//   }
+
+//   .contact-form {
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+
+//     .input-container {
+//       display: flex;
+//       width: 100%;
+//       max-width: 650px;
+//       align-items: center;
+//       gap: 8px;
+//     }
+
+//     label {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       width: 48px;
+//       flex: 0 0 48px;
+//     }
+
+//     input[type="text"],
+//     input[type="email"],
+//     textarea {
+//       flex: 1 1 auto;
+//       width: auto;
+//     }
+//     #send-btn {
+//       flex: 1 1 auto;
+//       width: auto;
+//       max-width: none;
+//     }
+//     form {
+//       width: 100%;
+//       max-width: 650px;
+//     }
+//   }
+// }
+
+// input[type="text"],
+// input[type="email"],
+// textarea {
+//   width: 80%; /* Full width */
+//   padding: 12px; /* Some padding */
+//   border: 1px solid #ccc; /* Gray border */
+//   border-radius: 4px; /* Rounded borders */
+//   box-sizing: border-box; /* Make sure that padding and width stays in place */
+//   margin-top: 6px; /* Add a top margin */
+//   margin-bottom: 16px; /* Bottom margin */
+//   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+// }
+
+// input:valid {
+//   border: 2px solid $richBlack;
+// }
+
+// .ficons {
+//   margin-right: 6px;
+//   margin-top: 6px;
+// }
+
+// #send-btn {
+//   background-color: $orangeWeb;
+//   color: $richBlack;
+//   padding: 12px 20px;
+//   border: none;
+//   border-radius: 6px;
+//   width: 100%;
+//   font-size: large;
+//   font-weight: bold;
+//   cursor: pointer;
+// }
+
+// #send-btn:hover {
+//   box-shadow:
+//     0 0 5px #ffb703,
+//     0 0 10px #ffb703,
+//     0 0 20px #ffb703;
+// }
+
 .contact {
-  min-height: 80vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
   background: $gunMetal;
   color: $lighterText;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
 
-  h2 {
-    font-size: xx-large;
+  .contact-container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 
-  .contact-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  /* --- LEFT COLUMN: INFO --- */
+  .contact-info {
+    flex: 1;
 
-    .input-container {
-      display: flex;
-      width: 100%;
-      max-width: 650px;
+    .status-badge {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
+      background: rgba(46, 204, 113, 0.15);
+      border: 1px solid rgba(46, 204, 113, 0.4);
+      color: $openGreen;
+      padding: 6px 12px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      font-family: $sourceCode;
+
+      .pulsing-dot {
+        width: 8px;
+        height: 8px;
+        background: $openGreen;
+        border-radius: 50%;
+        animation: pulse-green 2s infinite;
+      }
     }
 
-    label {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      strong {
+        color: $orangeWeb;
+      }
+    }
+
+    .sub-text {
+      color: $mutedBlue;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .expertise-list {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      flex: 0 0 48px;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .expertise-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .icon {
+          font-size: 1.5rem;
+          color: $orangeWeb;
+          width: 40px;
+          text-align: center;
+        }
+
+        h3 {
+          font-size: 1rem;
+          margin-bottom: 0.2rem;
+          color: $lighterText;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: $mutedBlue;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /* --- RIGHT COLUMN: FORM --- */
+  .contact-form-wrapper {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+
+    h3 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
     }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      flex: 1 1 auto;
-      width: auto;
-    }
-    #send-btn {
-      flex: 1 1 auto;
-      width: auto;
-      max-width: none;
-    }
     form {
-      width: 100%;
-      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Floating Label Inputs */
+    .input-group {
+      position: relative;
+
+      input,
+      textarea {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid #444;
+        border-radius: 8px;
+        padding: 1rem 1rem;
+        color: $offWhite;
+        font-family: $quicksand;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: $orangeWeb;
+        }
+
+        /* Float label when placeholder is not shown (input has value) or focused */
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+          top: -10px;
+          left: 10px;
+          font-size: 0.75rem;
+          color: $orangeWeb;
+          background: $gunMetal; // Mask the line behind label
+          padding: 0 4px;
+        }
+      }
+
+      label {
+        position: absolute;
+        left: 1rem;
+        top: 1rem; // Center vertically in input
+        color: $mutedBlue;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        background: transparent;
+        border-radius: 8px;
+      }
+    }
+
+    #send-btn {
+      margin-top: 1rem;
+      background: $orangeWeb;
+      color: $richBlack;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+      }
+
+      .material-icons {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // DESKTOP LAYOUT
+  @media only screen and (min-width: 960px) {
+    padding: 6rem 2rem;
+
+    .contact-container {
+      flex-direction: row; // Side by Side
+      align-items: flex-start; // Align top
+      gap: 4rem;
+    }
+
+    // Adjust text sizes for desktop
+    .contact-info h2 {
+      font-size: 3.5rem;
     }
   }
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 80%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-input:valid {
-  border: 2px solid $richBlack;
-}
-
-.ficons {
-  margin-right: 6px;
-  margin-top: 6px;
-}
-
-#send-btn {
-  background-color: $orangeWeb;
-  color: $richBlack;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  width: 100%;
-  font-size: large;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#send-btn:hover {
-  box-shadow:
-    0 0 5px #ffb703,
-    0 0 10px #ffb703,
-    0 0 20px #ffb703;
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(46, 204, 113, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
 }
 
 footer {
@@ -832,19 +1049,6 @@ footer {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
       }
-    }
-  }
-
-  .contact-form {
-    width: 75%;
-
-    form {
-      width: 100%;
-      max-width: 650px;
-    }
-
-    #send-btn {
-      width: 90%;
     }
   }
 }
