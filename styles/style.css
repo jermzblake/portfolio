@@ -10,6 +10,25 @@
 body {
   font-family: "Quicksand", sans-serif;
   width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #eef0f2 #011627;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #011627;
+}
+body::-webkit-scrollbar-thumb {
+  background: #eef0f2;
+  border-radius: 6px;
+  border: 2px solid #011627;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #fca311;
+}
+body::-webkit-scrollbar-thumb:active {
+  background: rgb(215.2863070539, 134.7800829876, 2.7136929461);
 }
 
 .material-icons {
