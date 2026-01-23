@@ -92,7 +92,6 @@ header {
   color: #eef0f2;
   position: relative;
   overflow: hidden;
-  padding-top: 60px;
 }
 header .hero-container {
   display: flex;

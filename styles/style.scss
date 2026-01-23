@@ -130,7 +130,6 @@ header {
   color: $lighterText; // Lighter text for better contrast on dark
   position: relative;
   overflow: hidden; // Keeps the ticker from stretching page width
-  padding-top: 60px; // Account for fixed nav
 
   .hero-container {
     display: flex;
