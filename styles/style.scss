@@ -237,7 +237,7 @@ header {
 
     .ticker {
       display: inline-block;
-      animation: marquee 20s linear infinite;
+      animation: marquee 40s linear infinite; // Marquee speed adjust as needed based on content length
     }
 
     .item {

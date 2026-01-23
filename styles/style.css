@@ -190,7 +190,7 @@ header .ticker-wrap {
 }
 header .ticker-wrap .ticker {
   display: inline-block;
-  animation: marquee 20s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 header .ticker-wrap .item {
   display: inline-block;
