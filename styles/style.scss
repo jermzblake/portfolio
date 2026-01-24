@@ -23,7 +23,7 @@ $lighterText: #eef0f2;
 $offWhite: #e2e8f0;
 $mutedBlue: #8892b0;
 $heroHook: #a8b2d1;
-$aciveGreen: #2ecc71;
+$activeGreen: #2ecc71;
 $prussianBlue: #020022;
 
 * {
@@ -481,7 +481,7 @@ header {
         display: flex;
         align-items: center;
         gap: 8px;
-        color: $aciveGreen;
+        color: $activeGreen;
         font-family: $sourceCode;
         font-size: 0.9rem;
         font-weight: bold;
@@ -489,7 +489,7 @@ header {
         .pulsing-dot {
           width: 8px;
           height: 8px;
-          background: $aciveGreen;
+          background: $activeGreen;
           border-radius: 50%;
           animation: pulse-green 2s infinite;
         }
@@ -843,7 +843,7 @@ header {
       gap: 8px;
       background: rgba(46, 204, 113, 0.15);
       border: 1px solid rgba(46, 204, 113, 0.4);
-      color: $aciveGreen;
+      color: $activeGreen;
       padding: 6px 12px;
       border-radius: 99px;
       font-size: 0.85rem;
@@ -854,7 +854,7 @@ header {
       .pulsing-dot {
         width: 8px;
         height: 8px;
-        background: $aciveGreen;
+        background: $activeGreen;
         border-radius: 50%;
         animation: pulse-green 2s infinite;
       }
