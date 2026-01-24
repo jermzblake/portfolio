@@ -955,6 +955,14 @@ footer .footer-strip .built-with .separator {
   animation: separator-blink 1.1s steps(1, end) infinite;
 }
 
+.scroll-animate {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.scroll-animate.animate__animated {
+  opacity: 1;
+}
+
 @keyframes separator-blink {
   0%, 49% {
     opacity: 1;

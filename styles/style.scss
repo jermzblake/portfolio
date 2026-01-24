@@ -1103,6 +1103,16 @@ footer {
   }
 }
 
+// Hide scroll-triggered elements until animation starts to prevent flicker/jump
+.scroll-animate {
+  opacity: 0;
+  will-change: transform, opacity;
+
+  &.animate__animated {
+    opacity: 1;
+  }
+}
+
 @keyframes separator-blink {
   0%,
   49% {
