@@ -174,257 +174,257 @@
       ></script>
     </section>
     <section id="portfolio" class="portfolio">
-      <h2>Projects</h2>
-      <p class="section-hint">Tap a card to flip it and see details.</p>
-      <div class="project-cards-container">
-        <div class="project-card p5">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <img
-                class="diary"
-                src="./media/resum-aid-landing-shot.jpg"
-                alt="Resum-Aid screenshot"
-              />
-              <p>Resum-Aid</p>
-            </div>
-            <!-- hidden detail card toggled by hover or click -->
-            <div class="project-card-back detail-card">
-              <h3>Resum-Aid</h3>
-              <hr />
-              <div class="inner-content">
-                <p><strong>AI-Powered Resume Enhancement Tools</strong></p>
-                <p>
-                  Server-rendered web application that analyzes resume bullet
-                  points, matches roles, and assembles tailored resumes with
-                  exportable previews.
-                </p>
-                <p>
-                  Built with Bun and Hono for server-side rendering, Tailwind
-                  CSS for UI, and Docker for deployment, integrating LLMs via
-                  Ollama Cloud and OpenAI.
-                </p>
-              </div>
-              <hr />
-              <div class="card-links">
-                <a href="https://resum-aid.fly.dev/" target="_blank">DEMO</a>
-                &nbsp; | &nbsp;
-                <a
-                  href="https://github.com/jermzblake/resum-aid"
-                  target="_blank"
-                >
-                  CODE</a
-                >
-              </div>
-            </div>
+      <div class="spotlight-wrapper">
+        <div class="section-header">
+          <h2>Current Focus</h2>
+          <div class="status-line">
+            <span class="pulsing-dot"></span> Active Design & Development
           </div>
         </div>
-        <div class="project-card p4">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <img
-                class="obsidi"
-                src="./media/obsidi-landing-mobile.png"
-                alt="Obsidi screenshot"
-              />
-              <p>Obsidi</p>
-            </div>
-            <!-- hidden detail card toggled by hover or click -->
-            <div class="project-card-back detail-card">
-              <h3>Obsidi</h3>
-              <hr />
-              <div class="inner-content">
-                <p><strong>Multi-Sided Networking Platform.</strong></p>
-                <p>
-                  Built and launched a networking and talent platform connecting
-                  Black tech professionals, hiring companies, and communities.
-                  First full-stack developer and technical lead, owning the
-                  product from inception to production.
-                </p>
-                <p>
-                  <strong>Tech Stack: </strong> React, Node.js, Typescript,
-                  PostgreSQL, Redis, Docker & AWS
-                </p>
-              </div>
-              <hr />
-              <div class="card-links">
-                <a href="https://app.obsidi.com" target="_blank">LIVE</a>
-              </div>
+
+        <div class="spotlight-card animate__animated animate__fadeInUp">
+          <div class="spotlight-visual">
+            <img
+              src="./media/agent-zero-architecture.jpg"
+              alt="Agent Zero System Architecture"
+            />
+            <div class="tech-stack-row">
+              <span>LangGraph</span>
+              <span>Bun</span>
+              <span>Supabase</span>
+              <span>LiteLLM</span>
             </div>
           </div>
-        </div>
-        <div class="project-card p0">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <span class="status-pill">
-                <i class="fas fa-code-branch"></i> Active Development
-              </span>
-              <img
-                class="agent-zero-thumb"
-                src="./media/agent-zero-architecture.jpg"
-                alt="Agent Zero Architecture Diagram"
-              />
-              <p>
-                Agent Zero
-                <!-- <span style="font-size: 0.6em; display: block; line-height: 1"
-                  >Agentic SaaS Platform</span
-                > -->
-              </p>
+
+          <div class="spotlight-content">
+            <div class="spotlight-header">
+              <h3>Agent Zero</h3>
+              <span class="type-badge">Agentic SaaS Platform</span>
             </div>
 
-            <div class="project-card-back detail-card">
-              <h3>Agent Zero</h3>
-              <hr />
-              <div class="inner-content">
-                <p>
-                  <strong>Hybrid Multi-Tenant Agentic Platform</strong>. A
-                  scalable SaaS enabling SMBs to deploy autonomous AI workforce
-                  agents.
-                </p>
-                <ul
-                  style="
-                    text-align: left;
-                    font-size: 0.85rem;
-                    padding-left: 20px;
-                    margin-bottom: 10px;
-                  "
+            <p class="description">
+              <strong>A Hybrid Multi-Tenant System</strong> designed to
+              democratize autonomous AI workforces. Unlike standard chatbots,
+              this system supports
+              <strong>stateful, long-running agentic workflows</strong>
+              capable of complex decision-making and tool-calling with strict
+              data isolation.
+            </p>
+
+            <ul class="specs-list">
+              <li>
+                <i class="fas fa-shield-alt"></i>
+                <span
+                  ><strong>Security:</strong> "Split Key" Auth & RLS
+                  Isolation</span
                 >
-                  <li>
-                    <strong>Orchestration:</strong> LangGraph.js (Stateful,
-                    cyclic workflows)
-                  </li>
-                  <li>
-                    <strong>Runtime:</strong> Bun + Hono (Edge-compatible)
-                  </li>
-                  <li>
-                    <strong>Security:</strong> Custom "Split Key" Auth & RLS
-                    Data Isolation
-                  </li>
-                  <li>
-                    <strong>AI Gateway:</strong> LiteLLM for model-agnostic cost
-                    control
-                  </li>
-                </ul>
-              </div>
-              <hr />
-              <div class="card-links">
-                <a
-                  href="https://gist.github.com/jermzblake/5d15c1b88b5ac81f52a66e976beeceee"
-                  target="_blank"
-                  ><i class="fas fa-sitemap" style="margin-right: 5px"></i
-                  >SYSTEM DESIGN</a
+              </li>
+              <li>
+                <i class="fas fa-project-diagram"></i>
+                <span
+                  ><strong>Orchestration:</strong> Cyclic Graphs
+                  (loops/memory)</span
                 >
-              </div>
+              </li>
+              <li>
+                <i class="fas fa-coins"></i>
+                <span
+                  ><strong>Gateway:</strong> Model-agnostic Cost Guards</span
+                >
+              </li>
+            </ul>
+
+            <div class="spotlight-actions">
+              <a
+                href="https://gist.github.com/jermzblake/5d15c1b88b5ac81f52a66e976beeceee"
+                target="_blank"
+                class="btn-spec"
+              >
+                <i class="fas fa-sitemap"></i> View System Design
+              </a>
             </div>
           </div>
         </div>
-        <div class="project-card p3">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <img
-                class="do-it"
-                src="./media/do-it-dashboard.jpg"
-                alt="Do it screenshot"
-              />
-              <p>Do it</p>
-            </div>
-            <!-- hidden detail card toggled by hover or click -->
-            <div class="project-card-back detail-card">
-              <h3>Do it</h3>
-              <hr />
-              <div class="inner-content">
-                <p>
-                  Full-stack <strong>task management solution</strong> that
-                  streamlines your workflow with intelligent task organization,
-                  priority management, and progress tracking.
-                </p>
-                <p>
-                  This responsive app was built with Bun, React, Shadcn UI,
-                  PostgreSQL, and Drizzle ORM.
-                </p>
+      </div>
+
+      <div class="archive-wrapper">
+        <h2 class="archive-heading">Projects</h2>
+        <p class="section-hint">Tap a card to flip for details.</p>
+
+        <div class="project-cards-container">
+          <div class="project-card p5">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <img
+                  class="diary"
+                  src="./media/resum-aid-landing-shot.jpg"
+                  alt="Resum-Aid screenshot"
+                />
+                <p>Resum-Aid</p>
               </div>
-              <hr />
-              <div class="card-links">
-                <a href="https://do-it-carpe-diem.fly.dev" target="_blank"
-                  >DEMO</a
-                >
-                &nbsp; | &nbsp;
-                <a href="https://github.com/jermzblake/do-it" target="_blank"
-                  >CODE</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card p2">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <img
-                class="son-ofa-b"
-                src="./media/son-ofa-b.png"
-                alt="Son Ofa B screenshot"
-              />
-              <p>Son Ofa B</p>
-            </div>
-            <!-- hidden detail card toggled by hover or click -->
-            <div class="project-card-back detail-card">
-              <h3>Son Ofa B</h3>
-              <hr />
-              <div class="inner-content">
-                <p>
-                  <strong>Realtime multiplayer card game.</strong> Based on the
-                  classic trick taking game, Oh Hell.
-                </p>
-                <p>
-                  This desktop/tablet app was built with MERN stack and
-                  Socket.io
-                </p>
-              </div>
-              <hr />
-              <div class="card-links">
-                <!-- <a href="https://son-ofa-b.herokuapp.com" target="_blank">DEMO</a> -->
-                <!-- &nbsp; | &nbsp; -->
-                <a
-                  href="https://github.com/jermzblake/son-ofa-b"
-                  target="_blank"
-                  >CODE</a
-                >
+              <div class="project-card-back detail-card">
+                <h3>Resum-Aid</h3>
+                <hr />
+                <div class="inner-content">
+                  <p><strong>AI-Powered Resume Enhancement</strong></p>
+                  <p>
+                    Server-rendered web application that analyzes resume bullet
+                    points, matches roles, and assembles tailored resumes with
+                    exportable previews.
+                  </p>
+                  <p>
+                    Built with Bun and Hono for server-side rendering, Tailwind
+                    CSS for UI, and Docker for deployment, integrating LLMs via
+                    Ollama Cloud and OpenAI.
+                  </p>
+                </div>
+                <hr />
+                <div class="card-links">
+                  <a href="https://resum-aid.fly.dev/" target="_blank">DEMO</a>
+                  &nbsp; | &nbsp;
+                  <a
+                    href="https://github.com/jermzblake/resum-aid"
+                    target="_blank"
+                    >CODE</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="project-card p1">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <img
-                class="diary"
-                src="./media/best-budz-login.png"
-                alt="Best Budz screenshot"
-              />
-              <p>Best Budz</p>
-            </div>
-            <!-- hidden detail card toggled by hover or click -->
-            <div class="project-card-back detail-card">
-              <h3>Best Budz</h3>
-              <hr />
-              <div class="inner-content">
-                <p>
-                  <strong> Cannabis consumption diary.</strong> Utilizing forms
-                  to help document one's experience with different strains of
-                  cannabis.
-                </p>
-                <p>This app includes full CRUD and was built with MERN stack</p>
+
+          <div class="project-card p4">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <img
+                  class="obsidi"
+                  src="./media/obsidi-landing-mobile.png"
+                  alt="Obsidi screenshot"
+                />
+                <p>Obsidi</p>
               </div>
-              <hr />
-              <div class="card-links">
-                <a href="https://best-budz.onrender.com" target="_blank"
-                  >DEMO</a
-                >
-                &nbsp; | &nbsp;
-                <a
-                  href="https://github.com/jermzblake/Best-Budz"
-                  target="_blank"
-                  >CODE</a
-                >
+              <div class="project-card-back detail-card">
+                <h3>Obsidi</h3>
+                <hr />
+                <div class="inner-content">
+                  <p><strong>Multi-Sided Networking Platform</strong></p>
+                  <p>
+                    Built and launched a networking and talent platform
+                    connecting Black tech professionals, hiring companies, and
+                    communities. First full-stack developer and technical lead,
+                    owning the product from inception to production.
+                  </p>
+                  <p>
+                    <strong>Tech Stack: </strong> React, Node.js, Typescript,
+                    PostgreSQL, Redis, Docker & AWS
+                  </p>
+                </div>
+                <hr />
+                <div class="card-links">
+                  <a href="https://app.obsidi.com" target="_blank">LIVE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card p3">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <img
+                  class="do-it"
+                  src="./media/do-it-dashboard.jpg"
+                  alt="Do it screenshot"
+                />
+                <p>Do it</p>
+              </div>
+              <div class="project-card-back detail-card">
+                <h3>Do it</h3>
+                <hr />
+                <div class="inner-content">
+                  <p><strong>Intelligent Task Management</strong></p>
+                  <p>
+                    Full-stack <strong>task management solution</strong> that
+                    streamlines your workflow with intelligent task
+                    organization, priority management, and progress tracking.
+                  </p>
+                  <p>
+                    This responsive app was built with Bun, React, Shadcn UI,
+                    PostgreSQL, and Drizzle ORM.
+                  </p>
+                </div>
+                <hr />
+                <div class="card-links">
+                  <a href="https://do-it-carpe-diem.fly.dev" target="_blank"
+                    >DEMO</a
+                  >
+                  &nbsp; | &nbsp;
+                  <a href="https://github.com/jermzblake/do-it" target="_blank"
+                    >CODE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card p2">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <img
+                  class="son-ofa-b"
+                  src="./media/son-ofa-b.png"
+                  alt="Son Ofa B screenshot"
+                />
+                <p>Son Ofa B</p>
+              </div>
+              <div class="project-card-back detail-card">
+                <h3>Son Ofa B</h3>
+                <hr />
+                <div class="inner-content">
+                  <p><strong>Realtime Multiplayer Card Game</strong></p>
+                  <p>Based on the classic trick taking game, Oh Hell.</p>
+                  <p>Built with MERN stack and Socket.io.</p>
+                </div>
+                <hr />
+                <div class="card-links">
+                  <a
+                    href="https://github.com/jermzblake/son-ofa-b"
+                    target="_blank"
+                    >CODE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card p1">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <img
+                  class="diary"
+                  src="./media/best-budz-login.png"
+                  alt="Best Budz screenshot"
+                />
+                <p>Best Budz</p>
+              </div>
+              <div class="project-card-back detail-card">
+                <h3>Best Budz</h3>
+                <hr />
+                <div class="inner-content">
+                  <p><strong>Cannabis Consumption Diary</strong></p>
+                  <p>Document experiences with different strains.</p>
+                  <p>Full CRUD. Built with MERN stack.</p>
+                </div>
+                <hr />
+                <div class="card-links">
+                  <a href="https://best-budz.onrender.com" target="_blank"
+                    >DEMO</a
+                  >
+                  &nbsp; | &nbsp;
+                  <a
+                    href="https://github.com/jermzblake/Best-Budz"
+                    target="_blank"
+                    >CODE</a
+                  >
+                </div>
               </div>
             </div>
           </div>
