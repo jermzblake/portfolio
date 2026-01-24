@@ -609,6 +609,7 @@ header .ticker-wrap .item:before {
   border-bottom-left-radius: 15px;
   position: relative;
   overflow: hidden;
+  /* Specific screenshot adjustments */
 }
 .project-card-front::after {
   content: "Tap to flip";
@@ -631,10 +632,22 @@ header .ticker-wrap .item:before {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  -o-object-position: center top;
+     object-position: center top;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+}
+.project-card-front #resum-aid-screenshot {
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%;
+}
+.project-card-front #obsidi-screenshot {
+  -o-object-position: 50% 9%;
+     object-position: 50% 9%;
+}
+.project-card-front #son-ofa-b-screenshot {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 .project-card-front p {
   background: #fca311;

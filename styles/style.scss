@@ -748,9 +748,22 @@ header {
     height: 90%;
     width: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: center top;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+  }
+
+  /* Specific screenshot adjustments */
+  #resum-aid-screenshot {
+    object-position: 50% 20%;
+  }
+
+  #obsidi-screenshot {
+    object-position: 50% 9%;
+  }
+
+  #son-ofa-b-screenshot {
+    object-position: 50% 50%;
   }
 
   p {
