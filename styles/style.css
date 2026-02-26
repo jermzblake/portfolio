@@ -608,7 +608,6 @@ header .ticker-wrap .item:before {
   border-bottom-left-radius: 15px;
   position: relative;
   overflow: hidden;
-  /* Specific screenshot adjustments */
 }
 .project-card-front::after {
   content: "Tap to flip";
@@ -636,9 +635,12 @@ header .ticker-wrap .item:before {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+.project-card-front {
+  /* Specific screenshot adjustments */
+}
 .project-card-front #resum-aid-screenshot {
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%;
+  -o-object-position: 50% 30%;
+     object-position: 50% 30%;
 }
 .project-card-front #obsidi-screenshot {
   -o-object-position: 50% 9%;
@@ -702,8 +704,6 @@ header .ticker-wrap .item:before {
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
-  /* --- LEFT COLUMN: INFO --- */
-  /* --- RIGHT COLUMN: FORM --- */
 }
 .contact .contact-container {
   width: 100%;
@@ -711,6 +711,9 @@ header .ticker-wrap .item:before {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+.contact {
+  /* --- LEFT COLUMN: INFO --- */
 }
 .contact .contact-info {
   flex: 1;
@@ -780,6 +783,9 @@ header .ticker-wrap .item:before {
   color: #8892b0;
   margin: 0;
 }
+.contact {
+  /* --- RIGHT COLUMN: FORM --- */
+}
 .contact .contact-form-wrapper {
   flex: 1;
   background: rgba(255, 255, 255, 0.03);
@@ -787,7 +793,6 @@ header .ticker-wrap .item:before {
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-  /* Floating Label Inputs */
 }
 .contact .contact-form-wrapper h3 {
   margin-bottom: 2rem;
@@ -797,6 +802,9 @@ header .ticker-wrap .item:before {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+.contact .contact-form-wrapper {
+  /* Floating Label Inputs */
 }
 .contact .contact-form-wrapper .input-group {
   position: relative;
@@ -813,11 +821,14 @@ header .ticker-wrap .item:before {
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s;
-  /* Float label when placeholder is not shown (input has value) or focused */
 }
 .contact .contact-form-wrapper .input-group input:focus,
 .contact .contact-form-wrapper .input-group textarea:focus {
   border-color: #fca311;
+}
+.contact .contact-form-wrapper .input-group input,
+.contact .contact-form-wrapper .input-group textarea {
+  /* Float label when placeholder is not shown (input has value) or focused */
 }
 .contact .contact-form-wrapper .input-group input:not(:-moz-placeholder) + label, .contact .contact-form-wrapper .input-group textarea:not(:-moz-placeholder) + label {
   top: -10px;
@@ -901,7 +912,6 @@ footer {
   width: 100%;
   border-top: 1px solid rgba(252, 163, 17, 0.1);
   /* --- Top Section: Social Icons --- */
-  /* --- Bottom Strip: Copyright --- */
 }
 footer .footer-main {
   background: #011627;
@@ -933,6 +943,9 @@ footer .footer-main .social-links a:hover {
   color: #011627;
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(252, 163, 17, 0.3);
+}
+footer {
+  /* --- Bottom Strip: Copyright --- */
 }
 footer .footer-strip {
   background: #020022;
